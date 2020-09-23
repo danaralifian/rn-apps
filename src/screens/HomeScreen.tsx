@@ -6,11 +6,9 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 export class HomeScreen extends Component {
   render() {
     return (
-      <SafeAreaView>
       <View>
         <Text> textInComponent </Text>
       </View>
-      </SafeAreaView>
     )
   }
 }

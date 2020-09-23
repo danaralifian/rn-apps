@@ -40,15 +40,11 @@ const App = () => {
   const Stack = createStackNavigator();
   return (
     <>
-    <SafeAreaProvider>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeScreen}/>
-          {/* <Stack.Screen name="Cart" component={CartScreen}/>
-          <Stack.Screen name="Account" component={AccountScreen}/> */}
-        </Stack.Navigator>
-      </NavigationContainer>
-    </SafeAreaProvider>
+      <SafeAreaView>
+        <View>
+          <Text>hello</Text>
+        </View>
+    </SafeAreaView>
     </>
   );
 };
