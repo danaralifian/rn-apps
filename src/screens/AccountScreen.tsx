@@ -8,7 +8,6 @@
  * @format
  */
 
-import 'react-native-gesture-handler'
 import React from 'react';
 import {
   SafeAreaView,
@@ -26,29 +25,22 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer } from '@react-navigation/native';
-
-import HomeScreen from './screens/HomeScreen'
-import CartScreen from './screens/CartScreen'
-import AccountScreen from './screens/AccountScreen'
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 declare const global: {HermesInternal: null | {}};
 
 const App = () => {
-  const Stack = createStackNavigator();
   return (
     <>
-    <SafeAreaProvider>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeScreen}/>
-          {/* <Stack.Screen name="Cart" component={CartScreen}/>
-          <Stack.Screen name="Account" component={AccountScreen}/> */}
-        </Stack.Navigator>
-      </NavigationContainer>
-    </SafeAreaProvider>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={styles.scrollView}>
+            <View>
+                Account
+            </View>
+        </ScrollView>
+      </SafeAreaView>
     </>
   );
 };
