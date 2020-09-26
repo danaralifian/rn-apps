@@ -1,8 +1,7 @@
 {
-  "name": "MyApp",
-  "displayName": "MyApp",
+  "name": "MeshopApps",
+  "displayName": "MeshopApps",
   "expo": {
-    "sdkVersion" : "37.0.0",
     "name": "MeShop"
   }
 }
