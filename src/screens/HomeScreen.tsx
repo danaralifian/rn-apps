@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import Banner from '../components/Banner'
+import FundamentalTest from '../test/fundamental.test'
 
 class HomeScreen extends Component {
     render() {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text> Home Screen </Text>
-                <Banner/>
+                <FundamentalTest/>
             </View>
         )
     }
