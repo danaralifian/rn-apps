@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Image, Text, View } from 'react-native'
-import images from '../assets/images'
+import images from '~/src/assets/images'
 
 class AccountScreen extends Component {
     render() {

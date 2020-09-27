@@ -4,9 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import HomeScreen from './screens/HomeScreen'
-import CartScreen from './screens/CartScreen'
-import AccountScreen from './screens/AccountScreen'
+import HomeScreen from '~/src/screens/HomeScreen'
+import CartScreen from '~/src/screens/CartScreen'
+import AccountScreen from '~/src/screens/AccountScreen'
 
 
 class App extends Component {
