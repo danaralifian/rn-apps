@@ -2,13 +2,16 @@ import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import Banner from '../components/Banner'
 import FundamentalTest from '../test/fundamental.test'
+import SlideItem from '~/src/components/SlideItem'
 
 class HomeScreen extends Component {
     render() {
         return (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text> Home Screen </Text>
-                <FundamentalTest/>
+            <View style={{ flex: 1}}>
+                <SlideItem/>
+                <View style={{ flex: 1}}>
+                  <Text>body</Text>
+                </View>
             </View>
         )
     }
