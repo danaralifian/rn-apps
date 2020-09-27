@@ -1,7 +1,5 @@
-const banner = require('./img/banner.jpg')
-
 const Images = {
-    banner,
+    banner : require('./img/banner.jpg'),
 }
 
 export default Images
