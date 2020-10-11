@@ -11,12 +11,17 @@ function CardItem({data}) {
 
     }
 
+    function currencyFormat(num) {
+        return 'Rp.' + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+    }
+
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={images.banner}/>
+            <Image style={styles.image} source={{uri : data.images.large_urls[0]}}/>
             <View style={styles.content}>
-                <Text style={styles.name}>{data.name}</Text>
-                <Button onPress={onPress} title='Tambah Ke'/>
+                <Text numberOfLines={2} style={styles.name}>{data.name}</Text>
+                <Text style={styles.price}>{currencyFormat(data.price)}</Text>
+                <Button color={'#ff8c25'} onPress={onPress} title='Add To Cart'/>
             </View>
         </View> 
     )
@@ -48,7 +53,12 @@ const styles = StyleSheet.create({
         padding : 10
     },
     name : {
-        marginBottom : 10
+        marginBottom : 5,
+        height : 35
+    },
+    price : {
+        fontWeight : 'bold',
+        marginBottom : 5
     }
 })
 

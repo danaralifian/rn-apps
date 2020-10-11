@@ -4,18 +4,44 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import { configureFonts, DefaultTheme, Provider as PaperProvider } from 'react-native-paper'
 
 import HomeScreen from '~/src/screens/HomeScreen'
 import CartScreen from '~/src/screens/CartScreen'
 import AccountScreen from '~/src/screens/AccountScreen'
 
+function App() {
+    const Stack = createStackNavigator()
+    const Tab = createBottomTabNavigator()
 
-class App extends Component {
-    render() {
-        const Stack = createStackNavigator()
-        const Tab = createBottomTabNavigator()
+    const fontConfig = {
+        default: {
+          regular: {
+            fontFamily: 'ubuntu',
+            fontWeight: 'normal',
+          },
+          medium: {
+            fontFamily: 'ubuntu',
+            fontWeight: 'normal',
+          },
+          light: {
+            fontFamily: 'ubuntu',
+            fontWeight: 'ubuntu',
+          },
+          thin: {
+            fontFamily: 'ubuntu',
+            fontWeight: 'normal',
+          },
+        },
+    };
+    
+    const theme = {
+        ...DefaultTheme,
+        fonts: configureFonts(fontConfig),
+    };
         
-        return (
+    return (
+        <PaperProvider theme={theme}>
             <NavigationContainer>
                 {/* <Stack.Navigator>
                     <Stack.Screen name="Home" component={HomeScreen} />
@@ -34,7 +60,7 @@ class App extends Component {
                     <Tab.Screen name="Account" component={AccountScreen}/>
                 </Tab.Navigator>
             </NavigationContainer>
-        )
-    }
+        </PaperProvider>
+    )
 }
 export default App

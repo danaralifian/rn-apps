@@ -44,10 +44,7 @@ function HomeScreen() {
       <ScrollView>
         <SlideItem/>
         <View style={styles.container}>
-          <Text style={styles.label}>Penawaran Terbaik</Text>
-          <View>
-            <Text>{products.length}</Text>
-          </View>
+          <Text style={styles.label}>Best Deals</Text>
           <View>
             <FlatList
               data={products}
@@ -64,7 +61,7 @@ function HomeScreen() {
 
 const styles = StyleSheet.create({
     container : {
-      padding : 10,
+      padding : 5,
     },
     root: {
       alignItems: 'center',
@@ -88,7 +85,10 @@ const styles = StyleSheet.create({
     label : {
       marginBottom : 5,
       fontWeight : 'bold',
-      fontSize : 16
+      fontSize : 16,
+      paddingLeft : 5,
+      paddingRight : 5,
+      fontFamily : 'ubuntu'
     }
   });
   
